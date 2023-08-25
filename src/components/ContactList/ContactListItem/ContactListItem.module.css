@@ -1,0 +1,37 @@
+.contact {
+  font-size: 25px;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contact_item {
+  margin-left: 20px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  color: var(--primary-text-color);
+  background: #dbdce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 80px;
+  height: 35px;
+  margin-left: 25px;
+  padding-top: 7px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border: 0;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.btn:is(:hover, :focus) {
+  background: var(--hover-color);
+}

@@ -1,0 +1,58 @@
+.form {
+  border: 1px solid black;
+  width: 600px;
+  height: 300px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 18px -7px rgba(0, 0, 0, 0.75);
+}
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 100px;
+  margin-bottom: 15px;
+}
+.input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  width: 100%;
+  max-width: 398px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #dbdce8;
+  padding: 8px 16px;
+  color: rgb(30, 10, 35);
+  margin-bottom: 16px;
+  margin-right: 30px;
+  margin-top: 16px;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  color: var(--primary-white-color);
+  background: #4a346b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 165px;
+  height: 40px;
+  margin-top: 25px;
+  padding-top: 8px;
+  padding-right: 64px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  border: 0;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.btn:is(:hover, :focus) {
+  background: var(--hover-color);
+}

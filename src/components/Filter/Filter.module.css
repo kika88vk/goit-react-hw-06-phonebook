@@ -1,0 +1,29 @@
+.label {
+  font-size: 25px;
+  color: var(--primary-text-color);
+  font-weight: 600;
+}
+.input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  width: 100%;
+  max-width: 398px;
+  height: 40px;
+  border: 1px solid rgba(47, 43, 43, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #dbdce8b8;
+  padding: 8px 16px;
+  color: rgb(30, 10, 35);
+  margin-bottom: 16px;
+  margin-right: 30px;
+  margin-top: 16px;
+}
+
+.filter_container {
+  width: 450px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
