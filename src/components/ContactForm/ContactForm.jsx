@@ -1,26 +1,23 @@
-import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import { useState } from 'react';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
+import { formAddContact } from 'redux/contactsSlice';
 
-const ContactForm = ({ submit }) => {
-  // submit = this.props.submit;
-  // static propTypes = {
-  //   submit: PropTypes.func.isRequired,
-  // };
+const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // state = {
-  //   name: '',
-  //   number: '',
-  // };
+
+  const contacts = useSelector(state => state.contacts.contacts);
+  const dispatch = useDispatch();
 
   let nameInputId = nanoid(10);
   let numberInputId = nanoid(10);
 
   const handleInputChange = evt => {
     const { name, value } = evt.currentTarget;
-    // this.setState({ [name]: value });
+
     switch (name) {
       case 'name':
         setName(value);
@@ -36,13 +33,21 @@ const ContactForm = ({ submit }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
 
-    submit({ name, number });
+    const existingContact = contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (existingContact) {
+      alert(`Contact with this name is already exists.`);
+      return;
+    }
+
+    dispatch(formAddContact({ name, number }));
 
     reset();
   };
 
   const reset = () => {
-    // this.setState({ name: '', number: '' });
     setName('');
     setNumber('');
   };
@@ -82,10 +87,6 @@ const ContactForm = ({ submit }) => {
       </button>
     </form>
   );
-};
-
-ContactForm.propTypes = {
-  submit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;
