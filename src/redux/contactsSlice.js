@@ -13,7 +13,7 @@ const contactsSlice = createSlice({
     },
     reducers: {
         formAddContact(state, action) {
-            state.contacts.push({
+            state.contacts.unshift({
                 id: nanoid(10),
                 name: action.payload.name,
                 number: action.payload.number,
